@@ -1,28 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-div.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-}
-div.container div.ball{
+div.child {
     width: 100px;
     height: 100px;
-    border-radius: 0;
-    background-color: blueviolet;
-    transition-duration: 1s;
-    transition-timing-function: ease;
+    background-color: powderblue;
 }
 
-div.container div.ball:hover {
-    /* transform: rotateZ(120deg); */
-    /* transform: scale(2); */
-    transform: translateX(400px);
-    cursor: pointer;
-    border-radius: 100%;
-    background-color: pink;
+div.child:hover{
+    background-color: thistle;
+}
+input:focus {
+    border-color: darkblue !important;
+}
+h1::selection{
+    background-color: deeppink;
+    color: ghostwhite;
+}
+li {
+    list-style: none;
+    font-size: 4rem;
+    position: relative;
+    width: 200px;
+    display: inline-block;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: hotpink;
+    right: 10px;
+    top: 30px;
+
 }
